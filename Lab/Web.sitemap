@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+    <siteMapNode url="Default.aspx" title="首页"  description="首页" >
+    </siteMapNode>
+    <siteMapNode url="WebForm1.aspx" title="由嵌入SQL语句实现CRUD"  description="由嵌入SQL语句实现CRUD" >
+    </siteMapNode>
+    <siteMapNode url="WebForm2.aspx" title="使用DateSet实现CRUD"  description="使用DateSet实现CRUD" >
+    </siteMapNode>
+    <siteMapNode url="WebForm3.aspx" title="关于"  description="关于" >
+    </siteMapNode>
+    <siteMapNode url="Recommend.aspx" title="设备荐购"  description="设备荐购" >
+    </siteMapNode>
+    <siteMapNode url="Comment.aspx" title="意见回复"  description="意见回复" >
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

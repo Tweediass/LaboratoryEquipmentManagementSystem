@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Lab.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .mnuTopMenu {
+            background-color: Transparent;
+            font-family: 宋体;
+            font-size: 12px;
+            position: relative;
+            top: 34px;
+        }
+
+        .DynamicMenuStyle /*动态菜单矩形区域样式*/ {
+            background-color: white;
+            border: solid 1px #ACC3DF;
+            padding: 1px 1px 1px 1px;
+            text-align: left;
+        }
+
+        .DynamicHoverStyle /*动态菜单项:鼠标悬停时的样式*/ {
+            background-color: #F7DFA5; /*#7C6F57;*/
+            color: #333333;
+        }
+
+        .DynamicSelectedStyle /*动态菜单项:选择时的样式*/ {
+            /*background-color:Gainsboro;*/
+            color: red;
+        }
+
+        .DynamicMenuItemStyle /*动态菜单项样式*/ {
+            padding: 2px 5px 2px 5px;
+            color: #333333;
+        }
+
+
+        .StaticSelectedStyle /*静态菜单项:选择时的样式*/ {
+            /*background-color:Gainsboro;*/
+            color: red;
+        }
+
+        .StaticMenuItemStyle /*静态菜单项样式*/ {
+            cursor: hand;
+            padding: 2px 5px 2px 5px;
+            color: #333333;
+            background-color:: Transparent;
+        }
+
+        .StaticHoverStyle /*静态菜单项:鼠标悬停时的样式*/ {
+            background-color: #84BCCD; /*#7C6F57;*/
+            cursor: hand;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="width: 100%;">
+            <tr>
+                <td align="center">
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    <asp:Menu ID="mnuTopMenu" runat="server" DynamicEnableDefaultPopOutImage="False" StaticDisplayLevels="2"
+                        DynamicHorizontalOffset="2" Font-Bold="False" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"
+                        StaticSubMenuIndent="10px" DisappearAfter="600"
+                        StaticSelectedStyle-CssClass="StaticSelectedStyle"
+                        StaticMenuItemStyle-CssClass="StaticMenuItemStyle"
+                        StaticHoverStyle-CssClass="StaticHoverStyle"
+                        DynamicMenuStyle-CssClass="DynamicMenuStyle"
+                        DynamicSelectedStyle-CssClass="DynamicSelectedStyle"
+                        DynamicMenuItemStyle-CssClass="DynamicMenuItemStyle"
+                        DynamicHoverStyle-CssClass="DynamicHoverStyle"
+                        DataSourceID="SiteMapDataSource1" Font-Size="XX-Large" ForeColor="#CC3300" BackColor="Black" Width="100%">
+                        <Items></Items>
+                        <DynamicHoverStyle CssClass="DynamicHoverStyle"></DynamicHoverStyle>
+                        <DynamicMenuItemStyle CssClass="DynamicMenuItemStyle"></DynamicMenuItemStyle>
+                        <DynamicMenuStyle CssClass="DynamicMenuStyle"></DynamicMenuStyle>
+                        <DynamicSelectedStyle CssClass="DynamicSelectedStyle"></DynamicSelectedStyle>
+                        <StaticHoverStyle CssClass="StaticHoverStyle"></StaticHoverStyle>
+                        <StaticMenuItemStyle CssClass="StaticMenuItemStyle" HorizontalPadding="100px" VerticalPadding="10px"></StaticMenuItemStyle>
+                        <StaticSelectedStyle CssClass="StaticSelectedStyle"></StaticSelectedStyle>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <hr>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <hr>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="background-color: #00FFFF">
+                    <a href="WebForm3.aspx">About</a>
+                    <br>
+                </td>
+            </tr>
+        </table>
+        <div>
+        </div>
+    </form>
+</body>
+</html>
